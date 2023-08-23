@@ -1,0 +1,80 @@
+{% extends 'client_header.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- breadcrumb start -->
+    <div class="breadcrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        <h2>create account</h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <nav aria-label="breadcrumb" class="theme-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">create account</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb End -->
+
+
+    <!--section start-->
+    <section class="register-page section-b-space">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>create account</h3>
+                    <div class="theme-card">
+                        <form method="post" action="/client/client_register/" class="theme-form">
+                             {% csrf_token %}
+                            <div class="form-row row">
+                                <div class="col-md-6">
+                                    <label >First Name</label>
+                                    <input type="text" class="form-control" id="fname" placeholder="First Name"
+                                        name="firstname">
+                                </div>
+                                <div class="col-md-6">
+                                    <label >Last Name</label>
+                                    <input type="text" class="form-control"  placeholder="Last Name"
+                                        name="lastname">
+                                </div>
+                                 <div class="col-md-6">
+                                    <label>email</label>
+                                    <input type="text" class="form-control"  placeholder="email"
+                                        name="email">
+                                </div>
+                                 <div class="col-md-6">
+                                    <label >contact</label>
+                                    <input type="text" class="form-control" placeholder="contact"
+                                        name="contact">
+                                </div>
+                                <div class="col-md-6">
+                                    <label >password</label>
+                                    <input type="password" class="form-control"  placeholder="password"
+                                        name="password">
+                                </div>
+                                <div class="col-md-6">
+                                    <label >Confirm Password</label>
+                                    <input type="password" class="form-control" id="lname" placeholder="Confirm Password"
+                                        name="confirm_password">
+                                </div>
+                                <button   class="btn btn-solid w-auto" type="submit">create Account</button>
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section ends-->
+{% endblock %}
